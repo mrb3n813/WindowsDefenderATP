@@ -512,7 +512,7 @@ function Invoke-AgentSmith
             
             try
             {
-                $output = New-MachineAccount -MachineAccount $MachineAccount -Credential $Credential -Password $Password -Domain $Domain -DomainController $DomainController -DistinguishedName $DistinguishedName
+                $output = Ad-Mq -MachineAccount $MachineAccount -Credential $Credential -Password $Password -Domain $Domain -DomainController $DomainController -DistinguishedName $DistinguishedName
 
                 if($output -like "*The server cannot handle directory requests*")
                 {
@@ -582,7 +582,7 @@ function Invoke-AgentSmith
 
 }
 
-function New-MachineAccount
+function Ad-Mq
 {
     
 
